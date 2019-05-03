@@ -2,10 +2,10 @@
 #   Main Configs   #
 # ---------------- #
 baseurl: 
-url: https://mazhuang.org/jekyll-theme-solid
+url: https://cysstomb.org/
 date_format: "ordinal"
-title: jekyll-theme-solid
-author: Zhuang Ma 
+title: 我的博客
+author: .cyss 
 
 # ---------------- #
 #   RSS / Email    #
@@ -40,11 +40,11 @@ comments_provider: gitment
 # !!!Important!!! Please modify infos below to yours
 # https://disqus.com
 disqus:
-    username: mzlogin
+    username: cis1124
 # https://imsun.net/posts/gitment-introduction/
 gitment:
-    owner: mzlogin
-    repo: jekyll-theme-solid
+    owner: cis1124
+    repo: cysstomb
     oauth:
         client_id: d2e1cbbd298958076462
         client_secret: b42a4178e5fd4a7cf63189ef4b1453b05c375709
