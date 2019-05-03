@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl: 
-url: https://cysstomb.org/
+url: http://cysstomb.com/
 date_format: "ordinal"
 title: 我的博客
 author: .cyss 
