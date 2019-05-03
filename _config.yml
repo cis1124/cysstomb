@@ -13,22 +13,52 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+title: Nangka
+description: >- # this means to ignore newlines until "author:"
+  Welcome to my awesome blog..
+author: .cyss
+author_avatar: assets/avatar.png
+email: poet1124@gmail.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "cysstomb.com" # the base hostname & protocol for your site, e.g. http://example.com
+# twitter_username: rmsubekti
+github_username:  rmsubekti/nangka
+# disqus_shortname: rmsubekti
+
+google_analytics: UA-124XXXXX-XX
+google_site_verification : McHopQXXXXQKRCXXXXX3XXXOXXXX
+cse_id : 010xxxxxxx00xxxxxxxx:v_uiprmpwme
+
+logo: /assets/icons/512.png
+social:
+  name: Nangka
+  links:
+    - https://twitter.com/rmsubekti
+    - https://www.facebook.com/rmsbekti
+    - https://www.linkedin.com/in/rahmatsubekti
+    - https://plus.google.com/u/0/+rmsubekti
+    - https://github.com/rmsubekti
+    - https://mozillians.org/u/bekti/
+    - https://developer.mozilla.org/id/profiles/bekti
+
+sass:
+    style: compressed
 
 # Build settings
 markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
+kramdown:
+  parse_block_html: true
+
+remote_theme: rmsubekti/nangka
+
+include:
+  - _pages
+
+defaults:
+    - {scope: { type: posts }, values: { layout: post, comments: true, permalink: '/blog/:title' }}
+
+paginate: 10
+paginate_path: '/blog/:num/'
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
