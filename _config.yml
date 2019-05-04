@@ -59,7 +59,7 @@ nav:
     url:            "/about"
   - name:           "文章"
     url:            "/archive"
-  - name:           "分类"
+  - name:           "标签"
     url:            "/tags"
 #  - name:           "Github"
 #    url:            "https://github.com/AWEEKJ/Kiko-plus"
