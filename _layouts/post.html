@@ -1,34 +1,37 @@
-{% include header.html %}
-<div class="container">
-    {% include navigation.html %}
-    <div class="main">
-        <h2> {{ page.title }} </h2>
-        {{ content }}
-        {% if page.categories %}
-        <div class="post_footer">
-          <p>Published on {{ page.date | date: "%b %d, %Y" }} in categories 
-          {% for cat in page.categories %}
-          <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>&nbsp;
-          {% endfor %}
-          <p>
-        </div>
-        {% endif %}
-        <ul class="prev_next">
-            {% if page.previous.url %}
-            <li>
-                <span>上一篇</span>
-                <a href="{{page.previous.url}}">{{page.previous.title}}</a>
-            </li>
-            {% endif %}
-            {% if page.next.url %}
-            <li>
-                <span>下一篇</span>
-                <a href="{{page.next.url}}">{{page.next.title}}</a>
-            </li>
-            {% endif %}
-        </ul>
-        {% include share.html %}
-        {% include comments.html %}
-    </div>
+---
+layout: default
+---
+<header>
+  <div class="header-small">
+    <a href="{{site.url}}{{site.baseurl}}">{{ site.name }}</a>
+  </div>
+</header>
+<div class="post">
+  <div class="post-title">{{ page.title }}</div>
+  <span class="post-date">
+    <time>{{ page.date | date_to_string }}</time>
+  </span>
+  <div class="post-tag">
+    <ul>
+      {% for tag in page.tags %}
+      <li>
+        <a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
+          <span>{{ tag }}</span>
+        </a>
+      </li>
+      {% unless forloop.last %}{% endunless %}
+      {% endfor %}
+    </ul>
+  </div>
+
+  {{ content }}
+
+  <!-- Disqus -->
+  {% if page.comments != false and site.disqus.id %}
+  <div class="post-disqus">
+      <section id="disqus_thread"></section>
+      {% include disqus.html %}
+  </div>
+  {% endif %}
+
 </div>
-{% include footer.html %}
