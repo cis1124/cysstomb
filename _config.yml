@@ -32,7 +32,7 @@ google-analytics:
 
 # Disqus
 disqus:
-  id:               "cyss1024"
+  id:               "cyss-1"
 
 # URL
 url:                "https://cysstomb.com" # the base hostname & protocol for your site
